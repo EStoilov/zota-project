@@ -3,6 +3,7 @@ package utils
 import (
 	"bytes"
 	"net/http"
+	"encoding/json"
 )
 
 func SendPostRequest(url string, payload interface{}) (*http.Response, error) {
