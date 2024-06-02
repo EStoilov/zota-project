@@ -11,7 +11,7 @@ import (
 func main() {
 	cfg := config.LoadConfig()
 
-	depositService := services.NewDepositService(cfg.SecretKey)
+	depositService := services.NewDepositService(cfg)
 	statusService := services.NewStatusService(cfg.SecretKey)
 
 	handler := web.NewHandler(depositService, statusService)
